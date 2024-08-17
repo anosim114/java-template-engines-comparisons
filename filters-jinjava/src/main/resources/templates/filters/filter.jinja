@@ -1,0 +1,34 @@
+{% macro filter(filter) %}
+    {% if not filter.hidden %}
+        {{ mutable_filter(filter) }}
+    {% elif filter.hidden %}
+        {{ hidden_filter(filter) }}
+    {% endif %}
+{% endmacro  %}
+
+{% macro mutable_filter(filter) %}
+    <div style="display: inline-block">
+        <h2>{{ filter.filter }}</h2>
+        <ul>
+            {% for value in filter.values %}
+                <li>
+                    <label>
+                        <input type="checkbox"
+                               name="filters['{{ value.filter }}']['{{ value.value }}']"
+                                {% if value.applied %} checked {% endif %}
+                                value="excluding">
+                        {{ value.value }}
+                    </label>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endmacro %}
+
+{% macro hidden_filter(filter, value) %}
+    {% for value in filter.values %}
+        <input type="hidden"
+               name="hiddenFilters['{{ value.filter }}']['{{ value.value }}']"
+               value="on">
+    {% endfor %}
+{% endmacro %}

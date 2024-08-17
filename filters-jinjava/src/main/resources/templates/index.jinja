@@ -1,0 +1,13 @@
+{% extends "templates/template.jinja" %}
+{% import 'templates/.components/alert.jinja' as alert %}
+
+{% block content %}
+    {# NOTE: if I now would want to nest some content to alert, how would I do it?#}
+    {# - by defining a macro there and importing it instead #}
+    {% call alert.alert("Attention:") %}
+        {{ i18n("alert.info") }}
+    {% endcall %}
+
+    {# NOTE: bad is, that you can't state what variables should be passed to the template #}
+    {% include 'templates/filters/filterbar.jinja' %}
+{% endblock %}

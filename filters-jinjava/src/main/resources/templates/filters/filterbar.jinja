@@ -1,0 +1,10 @@
+{% import 'templates/filters/filter.jinja' as filters %}
+
+<form data-hx-get="/filter" data-hx-swap="outerHTML">
+
+    {% for filter in availableFilters %}
+        {{ filters.filter(filter) }}
+    {% endfor %}
+
+    <input type="submit" value="search">
+</form>
