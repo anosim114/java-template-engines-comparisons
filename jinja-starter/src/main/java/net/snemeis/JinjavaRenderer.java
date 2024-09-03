@@ -17,13 +17,11 @@ import java.util.Map;
 public class JinjavaRenderer {
 
     Jinjava jj = new Jinjava();
+    ComponentResourceLocator locator;
 
     @SneakyThrows
     public JinjavaRenderer(ComponentResourceLocator componentLocator) {
-        if (componentLocator == null) {
-            throw new Exception("why??????????????????");
-        }
-
+        locator = componentLocator;
         log.info("{}", componentLocator.getCmpSize());
 
         // set resource locator to use class as well as look for components
@@ -51,6 +49,7 @@ public class JinjavaRenderer {
 
     // render a template with the filename `templateName` with the given `map`
     public String render(String templateName, Map<String, Object> map) {
+        log.info("{}", locator.getCmpSize());
         log.info("going to pull template: {}", templateName);
 
         String template;

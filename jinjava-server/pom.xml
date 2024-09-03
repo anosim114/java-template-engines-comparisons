@@ -40,6 +40,11 @@
             </exclusions>
         </dependency>
         <dependency>
+            <groupId>net.snemeis</groupId>
+            <artifactId>jinjava-components</artifactId>
+            <version>latest</version>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
