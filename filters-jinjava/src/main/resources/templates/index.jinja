@@ -1,5 +1,5 @@
 {% extends "templates/template.jinja" %}
-{% import 'templates/.components/alert.jinja' as alert %}
+{% from 'cr-alert' import alert %}
 
 {% block content %}
     {# NOTE: if I now would want to nest some content to alert, how would I do it?#}
@@ -10,4 +10,17 @@
 
     {# NOTE: bad is, that you can't state what variables should be passed to the template #}
     {% include 'templates/filters/filterbar.jinja' %}
+
+    <fieldset>
+        <legend>component testing</legend>
+
+        {% call alert("severe") %}
+            This is the alert message and this was slotted
+        {% endcall %}
+
+        <hr>
+
+        {% include "cr-somefile" %}
+        ^^^ include without slot
+    </fieldset>
 {% endblock %}

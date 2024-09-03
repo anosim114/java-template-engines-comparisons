@@ -1,5 +1,6 @@
 package net.snemeis.filtersjinjava;
 
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -34,7 +35,11 @@ public class FilterController {
 
     @GetMapping("/filter")
     @ResponseBody
-    String filter(Model model, @ModelAttribute("appliedFilters") FilterService.Filters appliedFilters) {
+    String filter(
+            Model model,
+            @ModelAttribute("appliedFilters") FilterService.Filters appliedFilters,
+            HttpServletResponse res
+    ) {
         log.info("doing specific filtering");
 
         var filters = filterService.consolidateFilterTypes(
@@ -44,6 +49,7 @@ public class FilterController {
 
         model.addAttribute("availableFilters", filters);
 
+        res.setContentType("text/html");
         return jj.render("filters/filterbar", model.asMap());
     }
 }
