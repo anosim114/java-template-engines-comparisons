@@ -3,24 +3,21 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.3.3</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>net.snemeis</groupId>
+        <artifactId>java-template-tests</artifactId>
+        <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>net.snemeis</groupId>
-    <artifactId>java-template-tests</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>qute</artifactId>
+    <version>latest</version>
+
     <packaging>pom</packaging>
+
     <modules>
-<!--        <module>filters-jinjava</module>-->
-        <module>jinja-starter</module>
-        <module>jinjava-components</module>
-        <module>jinjava-server</module>
-        <module>qute</module>
+        <module>qute-starter</module>
+        <module>qute-server</module>
+        <module>qute-components</module>
     </modules>
 
     <properties>

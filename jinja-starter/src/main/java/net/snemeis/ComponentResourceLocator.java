@@ -4,7 +4,6 @@ import com.hubspot.jinjava.interpret.JinjavaInterpreter;
 import com.hubspot.jinjava.loader.ResourceLocator;
 import com.hubspot.jinjava.loader.ResourceNotFoundException;
 import lombok.extern.slf4j.Slf4j;
-
 import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.Map;

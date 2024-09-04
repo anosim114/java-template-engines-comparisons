@@ -1,0 +1,36 @@
+{@String name}
+
+<!-- Note: intellij html comment shortcut 'ctrl + /' does not toggle comments in qute -->
+<!-- Note: raw includes in includes does not work, has to be wrapped by a section
+    like here the #body section, else the AlertComponent would not render -->
+{#include layout}
+    {#body}
+        <h2>welcome from the #index file</h2>
+
+        <p>Hello {name}!!!</p>
+
+        <p>{translate('test.message')}</p>
+        <p>{translate('test.withArg', 'this is the arg')}</p>
+
+        <br>
+
+        {#include components/AlertComponent}
+            This is the alert component
+        {/}
+
+
+        {#include components/AlertComponent severity='high'}
+            This is the alert component in anger
+        {/}
+
+        <style>
+            .alert--high {
+                border-color: red;
+            }
+
+            .alert--okayish {
+                border-color: lightgreen;
+            }
+        </style>
+    {/body}
+{/include}

@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="Quarkus" url="file://$PROJECT_DIR$/qute/qute-server" />
+    <file type="Quarkus" url="file://$PROJECT_DIR$/qute/qute-starter" />
+    <file type="Qute" url="file://$PROJECT_DIR$/qute/qute-server" />
+    <file type="Qute" url="file://$PROJECT_DIR$/qute/qute-starter" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -8,6 +14,7 @@
         <option value="$PROJECT_DIR$/filters-jinjava/pom.xml" />
         <option value="$PROJECT_DIR$/jinjava-server/pom.xml" />
         <option value="$PROJECT_DIR$/jinja-starter/pom.xml" />
+        <option value="$PROJECT_DIR$/qute/qute-server/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
