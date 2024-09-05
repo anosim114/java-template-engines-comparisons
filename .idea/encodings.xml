@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/filters-jinjava/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/filters-jinjava/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/jinja-starter/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/jinja-starter/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/jinjava-components/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/jinjava-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jinjava/filters-jinjava/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jinjava/filters-jinjava/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jinjava/jinja-starter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jinjava/jinja-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jinjava/jinjava-components/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jinjava/jinjava-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jinjava/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jinjava/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/qute/qute-components/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/qute/qute-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/qute/qute-starter/src/main/java" charset="UTF-8" />

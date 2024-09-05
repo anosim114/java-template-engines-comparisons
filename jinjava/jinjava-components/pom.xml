@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>net.snemeis</groupId>
-        <artifactId>qute</artifactId>
-        <version>latest</version>
+        <artifactId>jinjava</artifactId>
+        <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>qute-starter</artifactId>
+    <artifactId>jinjava-components</artifactId>
     <version>latest</version>
 
     <properties>
@@ -20,23 +20,18 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
+            <groupId>net.snemeis</groupId>
+            <artifactId>jinja-starter</artifactId>
+            <version>latest</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-qute</artifactId>
-            <version>3.12.2</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.jboss.slf4j</groupId>
-                    <artifactId>slf4j-jboss-logmanager</artifactId>
-                </exclusion>
-            </exclusions>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

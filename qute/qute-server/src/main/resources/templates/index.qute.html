@@ -23,6 +23,12 @@
             This is the alert component in anger
         {/}
 
+        {#include DoubleNested}
+            {#title}TITLE{/title}
+            {#paragraph}PARAGRAPH{/paragraph}
+            DEFAULT
+        {/}
+
         <style>
             .alert--high {
                 border-color: red;

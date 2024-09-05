@@ -17,6 +17,9 @@ public class QuteConfiguration {
     @Autowired
     MessageSource messageSource;
 
+    @Autowired
+    I18nNamespaceResolver i18nNamespaceResolver;
+
     // TODO: Could something like this be used to register global helper methods?
     // @Autowired
     // Map<String, Function> helperMethods;
@@ -36,6 +39,7 @@ public class QuteConfiguration {
                 .addValueResolver(ReflectionValueResolver::new)
                 .addResultMapper(this::someResultMapper)
                 .addValueResolver(this::i18nValueResolver)
+                .addNamespaceResolver(i18nNamespaceResolver)
 //                .addValueResolver(this::helperMethodValueResolver) // TODO: implement this
                 .build();
     }

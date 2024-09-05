@@ -1,0 +1,26 @@
+{% from 'templates/nesting.jinja' import render_dialog %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jinjava Sample</title>
+    <script src="https://unpkg.com/htmx.org@2.0.2/dist/htmx.js" integrity="sha384-yZq+5izaUBKcRgFbxgkRYwpHhHHCpp5nseXp0MEQ1A4MTWVMnqkmcuFez8x5qfxr" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Hello, {{ name }}!</h1>
+
+{#    {% include 'templates/nesting.jinja' %}#}
+
+{#    {{ nesting() }}#}
+    <fieldset>
+        {% call render_dialog('Hello World') %}
+            This is a simple dialog rendered by using a macro and
+            a call block.
+            {% block bTitle %}yes{% endblock %}
+            {% block bOne %}no{% endblock %}
+        {% endcall %}
+    </fieldset>
+</body>
+</html>

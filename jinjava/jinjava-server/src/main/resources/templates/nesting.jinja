@@ -1,0 +1,12 @@
+{% macro render_dialog(title, class='dialog') -%}
+    {{ caller() }}
+
+    <div class="{{ class }}">
+        <h2>{{ title }} {% block bTitle %}meh{% endblock %}</h2>
+        <div class="contents">
+            {% block bOne %}more meh{% endblock %}
+        </div>
+    </div>
+{%- endmacro %}
+
+this is the nesting partial
